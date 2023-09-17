@@ -13,7 +13,7 @@ const transport = nodemailer.createTransport({
 });
 
 const sendEmail = (message) => {
-  message.from = "maks.karalash@gmail.com";
+  message.from = "contacts.user-rest-api@gmail.com";
 
   return transport.sendMail(message);
 };

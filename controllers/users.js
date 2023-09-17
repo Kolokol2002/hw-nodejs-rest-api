@@ -27,8 +27,8 @@ const registrationUser = async (req, res, next) => {
     await sendEmail({
       to: req.body.email,
       subject: `Welcome to registration, ${req.body.email}`,
-      html: `<p> Please verify your email, click on link below</p></b><a href="http://localhost:3000/api/users/verify/${verificationToken}">Click</a>`,
-      text: `Please verify your email, click on link below\nhttp://localhost:3000/api/users/verify/${verificationToken}`,
+      html: `<p> Please verify your email, click on link below</p></b><a href="http://contacts-users.vercel.app/api/users/verify/${verificationToken}">Click</a>`,
+      text: `Please verify your email, click on link below\nhttp://contacts-users.vercel.app/api/users/verify/${verificationToken}`,
     });
 
     res.status(201).json({ user: { email: req.body.email, subscription } });
@@ -134,8 +134,8 @@ const verifyBegineUser = async (req, res, next) => {
     await sendEmail({
       to: email,
       subject: `Welcome to registration, ${email}`,
-      html: `<p> Please verify your email, click on link below</p></b><a href="http://localhost:3000/api/users/verify/${verificationToken}">Click</a>`,
-      text: `Please verify your email, click on link below\nhttp://localhost:3000/api/users/verify/${verificationToken}`,
+      html: `<p> Please verify your email, click on link below</p></b><a href="http://contacts-users.vercel.app/api/users/verify/${verificationToken}">Click</a>`,
+      text: `Please verify your email, click on link below\nhttp://contacts-users.vercel.app/api/users/verify/${verificationToken}`,
     });
 
     res.status(200).json({ message: "Verification email sent" });
